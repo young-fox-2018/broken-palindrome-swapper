@@ -6,8 +6,11 @@
  * @returns {boolean} true bila kata yang di-swap adalah palindrom
  */
 function palindromeSwapper(str) {
-  let newStr = '';
+  
   for (var i = 0; i < str.length; i++) {
+    
+    let newStr = '';
+    if (isPalindrome(str)) return true;
     for (var j = 0; j < str.length; j++) {
       if (i === j) {
         newStr += str[j+1];
@@ -37,3 +40,5 @@ function isPalindrome(str) {
 console.log(palindromeSwapper('arcecar')); // TRUE
 console.log(palindromeSwapper('racecar')); // TRUE
 console.log(palindromeSwapper('recacar')); // FALSE
+
+console.log(palindromeSwapper('raeccar')); // TRUE TEST CASE 2 COBA
