@@ -8,17 +8,13 @@
 function palindromeSwapper(str) {
   for (var i = 0; i < str.length - 1; i++) {
     let newStr = '';
-    debugger
     for (var j = i; j < str.length; j++) {
-      debugger
       if (i === j) {
         newStr += str[j + 1];
         newStr += str[j];
-        debugger
         j++;
       } else {
         newStr += str[j];
-        debugger
       }
     }
     if (isPalindrome(newStr) || isPalindrome(str)) return true;
