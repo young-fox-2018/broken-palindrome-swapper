@@ -5,14 +5,16 @@
  * @param {string} str - input kata yang ingin di-swap dan dicek palindrom
  * @returns {boolean} true bila kata yang di-swap adalah palindrom
  */
-function palindromeSwapper(str) {
-  let newStr = '';
+function palindromeSwapper(str) {  
   for (var i = 0; i < str.length; i++) {
+    let newStr = '';
     for (var j = 0; j < str.length; j++) {
       if (i === j) {
-        newStr += str[j+1];
-        newStr += str[j];
-        j++;
+        if(str[j+1] !== undefined){
+          newStr += str[j+1];
+        }
+          newStr += str[j];
+          j++;    
       } else {
         newStr += str[j];
       }
